@@ -1,0 +1,424 @@
+/* 以下為共用區域間寬度 */
+
+section {
+  margin-bottom: 75px;
+}
+
+/* 以下banner */
+
+.banner {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.slides {
+  width: 1200px;
+  height: 500px;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  overflow: hidden;
+}
+li.slide {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120px;
+  color: #fff;
+  transition: 0.5s transform ease-in-out;
+}
+.slide:nth-of-type(1) {
+  background-image: url(../img/banner1.jpg);
+  background-size: 100%;
+  background-color: #9a4;
+}
+.slide:nth-of-type(2) {
+  background-image: url(../img/banner2.jpg);
+  background-color: #429;
+  left: 100%;
+}
+.slide:nth-of-type(3) {
+  background-image: url(../img/banner3.jpg);
+  background-color: #84a;
+  left: 200%;
+}
+input[type="radio"] {
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+.controlsvisible {
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  text-align: center;
+}
+.controlsvisible label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 3px;
+  border: 2px solid #fff;
+}
+.slides
+  input[type="radio"]:nth-of-type(1):checked
+  ~ .controlsvisible
+  label:nth-of-type(1) {
+  background-color: #333;
+}
+.slides
+  input[type="radio"]:nth-of-type(2):checked
+  ~ .controlsvisible
+  label:nth-of-type(2) {
+  background-color: #333;
+}
+.slides
+  input[type="radio"]:nth-of-type(3):checked
+  ~ .controlsvisible
+  label:nth-of-type(3) {
+  background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide {
+  transform: translate(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide {
+  transform: translate(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide {
+  transform: translate(-200%);
+}
+
+/* 以下最新消息 */
+
+.news {
+  margin-top: 50px;
+}
+.news_wrap {
+  width: 948px;
+  margin: auto;
+  padding: 0 26px;
+}
+.list > a {
+  text-decoration: none;
+}
+.list img {
+  width: 20px;
+  float: right;
+  right: 0px;
+  /* top: -30px; */
+}
+.list h3 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #000;
+  margin-bottom: 10px;
+}
+.list h3:hover {
+  color: #702222;
+}
+.list p:hover {
+  color: #702222;
+}
+.list p {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  color: #505050;
+  margin-bottom: 40px;
+}
+.list {
+  transition: 0.7s;
+}
+.list:hover {
+  transform: translateX(40px);
+}
+
+/* 以下為看更多 */
+
+.more_wrap {
+  width: 970px;
+  margin: 30px auto 0;
+  text-align: right;
+  font-weight: 300;
+}
+.more img {
+  width: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.more a {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #969696;
+  text-decoration: none;
+}
+.news .more_wrap {
+  padding-right: 20px;
+}
+.more a:hover {
+  color: #702222;
+}
+
+/* 以下熱門菜單 */
+
+.menu_wrap {
+  margin: auto;
+  width: 1000px;
+  font-size: 0;
+}
+.row {
+  margin: 0 -6px;
+}
+.menu_pic {
+  position: relative;
+  float: left;
+  margin: 6px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.menu_text {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #505050;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff,
+    0 0 8px #fff, 0 0 10px #fff;
+}
+.menu_inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  color: #702222;
+  background-color: #e6e0d2e1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.6s ease;
+  transform: rotateY(180deg);
+}
+.menu_inner :first-child {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  padding-bottom: 40px;
+  position: relative;
+}
+.menu_inner :first-child:after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #702222;
+  position: absolute;
+  top: 35px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.menu_inner :first-child::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #702222;
+  position: absolute;
+  top: 33px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
+.menu_inner :last-child {
+  font-size: 14px;
+  font-weight: 100;
+  border: 1px solid #702222;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.menu_inner:hover {
+  opacity: 1;
+  transition: 1s ease;
+  transform: rotateY(0deg);
+}
+
+/* 以下為線上購物 */
+
+.shop_wrap {
+  display: flex;
+  width: 1000px;
+  margin: auto auto 25px;
+  justify-content: space-between;
+}
+.shop_item {
+  width: 230px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0 0 2px #969696, 0 0 10px #e8e8e8;
+  margin-bottom: 20px;
+  /* border: 1px solid #505050; */
+}
+.shop_item a {
+  text-decoration: none;
+  color: #000;
+}
+.shop_item:hover {
+  background-color: #fff9eb;
+  box-shadow: 0 0 2px #e6e0d2, 0 0 10px #e6e0d2;
+}
+.shop_pic img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.shop_pic {
+  position: relative;
+}
+.new.shop_pic::after {
+  content: "☰ New";
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 12px;
+  color: #505005;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  width: 40px;
+  height: 19px;
+  padding: 5px 5px 0px 7px;
+  background-color: #e8e8e8;
+}
+.new.shop_pic::before {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 34px;
+  border-top: 5px solid #969696;
+  border-right: 5px solid #0000;
+}
+
+.shop_text {
+  padding: 10px 22px 15px;
+}
+.shop_text > h3 {
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  line-height: 24px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.price {
+  display: flex;
+  justify-content: center;
+}
+#pricing {
+  color: #969696;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.shop_text p {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #702222;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 8px;
+}
+.shop_text span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* 以下為品牌精神 */
+
+.brand_wrap {
+  width: 1200px;
+  display: flex;
+  margin: auto;
+}
+.brand_appeal > h3 {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #702222;
+  line-height: 80px;
+  text-align: center;
+}
+.brand_appeal > p {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 35px;
+  font-weight: 100;
+  color: #505050;
+}
+.brand_pic {
+  width: 748px;
+}
+.brand_appeal {
+  width: 452px;
+  padding: 20px 110px;
+}
+
+/* 以下為門市資訊 */
+
+.map_wrap {
+  width: 982px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+}
+.map_item {
+  width: 282px;
+}
+.map_item > div > h3 {
+  margin: 0 0 7px 35px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0px 0px 2px #702222, 0px 0px 2px #702222, -2px -2px 0px #702222,
+    -1px -2px 0px #702222, 0px -2px 0px #702222, 1px -2px 0px #702222,
+    2px -2px 0px #702222, 2px -1px 0px #702222, 2px 0px 0px #702222,
+    2px 1px 0px #702222, 2px 2px 0px #702222, 1px 2px 0px #702222,
+    0px 2px 0px #702222, -1px 2px 0px #702222, -2px 2px 0px #702222,
+    -2px 1px 0px #702222, -2px 0px 0px #702222, -2px -1px 0px #702222;
+}
+.info > div > img {
+  margin: 12px 0px 0px 0px;
+}
+.info > div > span {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  font-weight: 100;
+  display: inline-block;
+  margin: 12px 0px 0px 10px;
+}
+.map_text {
+  margin: 40px 0px 0px 25px;
+}

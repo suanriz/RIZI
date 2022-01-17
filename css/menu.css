@@ -1,0 +1,110 @@
+nav a[href="menu.html"] {
+  color: #702222;
+}
+
+/* 以下麵包屑 */
+
+.path {
+  background-color: #f5f5f5;
+  margin-top: 52px;
+}
+.path_wrap {
+  width: 1000px;
+  height: 16px;
+  margin: auto;
+  display: flex;
+  padding: 5px 0px 8px 0px;
+}
+.path_wrap > li > a {
+  color: #969696;
+  font-size: 12px;
+  text-decoration: none;
+}
+.path_wrap > li + li::before {
+  content: "/";
+  color: #969696;
+  font-size: 11px;
+  padding: 0 4px;
+}
+
+/* 以下門市菜單 */
+.menu {
+  margin: 30px 0 75px 0;
+}
+.menu_wrap {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+.menu_pic img {
+  display: block;
+}
+.menu_wrap:nth-child(even) {
+  flex-direction: row-reverse;
+  /* background-color: #f5f5f5; */
+}
+.menu_text {
+  padding: 28px 50px;
+}
+.menu_text h3 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  margin: 8px 0;
+  letter-spacing: 0.04em;
+  color: #702222;
+}
+.menu_text a {
+  text-decoration: none;
+}
+.menu_text p {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 0.04em;
+  color: #505050;
+  line-height: 25px;
+}
+.more {
+  margin: 10px auto 10px;
+  display: inline-block;
+}
+.more a {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: #702222;
+  border: 1px solid #702222;
+}
+.more a:hover {
+  color: #505050;
+  border: 1px solid #505050;
+  background-color: #ffffff;
+}
+
+/* 以下看更多 */
+
+.from_btn {
+  display: flex;
+  justify-content: right;
+}
+.from_btn button {
+  font-family: "Noto Sans TC", sans-serif;
+  color: #505050;
+  width: 30%;
+  background-color: #e6e0d2e1;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.from_btn button:hover {
+  background-color: #969696;
+  color: #fff;
+}

@@ -1,0 +1,283 @@
+nav a[href="shop.html"] {
+  color: #702222;
+}
+
+/* 以下麵包屑 */
+
+.path {
+  background-color: #f5f5f5;
+  margin-top: 52px;
+}
+.path_wrap {
+  width: 1000px;
+  height: 16px;
+  margin: auto;
+  display: flex;
+  padding: 5px 0px 8px 0px;
+}
+.path_wrap > li > a {
+  color: #969696;
+  font-size: 12px;
+  text-decoration: none;
+}
+.path_wrap > li + li::before {
+  content: "/";
+  color: #969696;
+  font-size: 11px;
+  padding: 0 4px;
+}
+
+/* 以下產品頁 */
+
+.product_wrap {
+  margin-bottom: 75px;
+}
+.product {
+  margin: 30px auto 75px;
+}
+.small_pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.large_pic {
+  width: 500px;
+}
+.small_pic img {
+  width: 110px;
+  display: block;
+}
+.large_pic {
+  margin: 0 20px;
+}
+.product_main {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+.product_pic {
+  font-size: 0;
+}
+.product_text h3 {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.product_text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 10px;
+  /* border: 1px solid #009; */
+}
+.product_text li {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 0.04em;
+  color: #505050;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#pricing {
+  font-size: 16px;
+  color: #969696;
+  text-decoration: line-through;
+}
+#pricing span {
+  font-size: 14px;
+}
+.price p {
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: #702222;
+  font-weight: 300;
+  display: inline-block;
+  margin-right: 10px;
+}
+.price span {
+  font-size: 18px;
+}
+.product_text ul {
+  margin: 30px 0 20px;
+  flex-grow: 1;
+}
+.product_text sup {
+  font-size: 14px;
+  color: #702222;
+  position: relative;
+  top: -6px;
+}
+
+/* 以下購買按鈕 */
+
+.buy button {
+  font-family: "Noto Sans TC", sans-serif;
+  color: #505050;
+  width: 100%;
+  background-color: #e6e0d2e1;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  border: none;
+  margin-bottom: 20px;
+}
+.buy :hover {
+  background-color: #969696;
+  color: #fff;
+}
+.collect button {
+  font-family: "Noto Sans TC", sans-serif;
+  color: #969696;
+  width: 100%;
+  background-color: transparent;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  border: 1px solid #969696;
+  position: relative;
+  bottom: 0;
+}
+.collect :hover {
+  background-color: #e8e8e8;
+  border: 1px solid transparent;
+}
+/* 以下商品詳細 */
+
+.product_details {
+  width: 1000px;
+  margin: 0 auto 75px;
+}
+.product_details ul {
+  padding: 0 40px;
+}
+.product_details li {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 0.04em;
+  color: #505050;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+.product_details ul :first-child {
+  line-height: 16px;
+}
+
+/* 以下推薦商品 */
+
+.product_recommend {
+  width: 1000px;
+  margin: auto;
+}
+.product_recommend h4,
+.product_details h4 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.shop_wrap {
+  /* border: 1px solid #909; */
+  display: flex;
+  flex-grow: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+.shop_item {
+  width: 213px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 2px #969696, 0 0 10px #e8e8e8;
+}
+.shop_item a {
+  text-decoration: none;
+  color: #000;
+}
+.shop_pic img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.shop_pic {
+  position: relative;
+}
+.shop_text {
+  padding: 10px 22px 15px;
+}
+.shop_text > h3 {
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  line-height: 24px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.shop_wrap .price {
+  display: flex;
+  justify-content: center;
+}
+#recommend_pricing {
+  color: #969696;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.shop_text p {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #702222;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 8px;
+}
+.shop_text span {
+  font-size: 16px;
+}
+.new.shop_pic::after {
+  content: "☰ New";
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 12px;
+  color: #505050;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  width: 40px;
+  height: 19px;
+  padding: 5px 5px 0px 7px;
+  background-color: #e8e8e8;
+}
+.new.shop_pic::before {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 34px;
+  border-top: 5px solid #969696;
+  border-right: 5px solid #0000;
+}
+
+/* 以下為看更多 */
+
+.more_wrap {
+  width: 970px;
+  margin: 30px auto 0;
+  text-align: right;
+  font-weight: 300;
+}
+.more img {
+  width: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.more a {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #969696;
+  text-decoration: none;
+}
+.news .more_wrap {
+  padding-right: 20px;
+}
+.more a:hover {
+  color: #702222;
+}

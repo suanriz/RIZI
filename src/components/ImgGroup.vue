@@ -52,7 +52,7 @@ onMounted(() => {
       data-aos-easing="ease-in-sine"
     >
       <a-image
-        :key="largePicSrc + data.id"
+        :key="`${largePicSrc}${data.id}`"
         :src="largePicSrc"
         :preview="{ visible: isAlbumOpen }"
         @click="isAlbumOpen = true"

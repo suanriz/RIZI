@@ -5,7 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
-  base: 'rizi',
+  base: '/rizi/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

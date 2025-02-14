@@ -1,8 +1,8 @@
 import { createWebHistory, createRouter, RouteRecordRaw } from 'vue-router'
+import { useIndexStore } from '@/stores/indexStore'
+import { renderTitle, } from '@/utils/lib'
 import MainView from '@/views/MainView.vue'
 import HomeView from '@/views/HomeView.vue'
-import { useIndexStore } from '@/stores/indexStore'
-import { renderTitle } from '@/utils/lib'
 import { SITE_NAME } from '@/utils/site'
 import AOS from 'aos'
 
@@ -75,15 +75,15 @@ const routes: RouteRecordRaw[] = [
         component: () => import('@/views/NotFound.vue'),
       },
       {
-        path: '/:pathMatch(.*)',
-        redirect: '/404'
+        path: '/:pathMatch(.*)*',
+        redirect: '/404',
       }
     ]
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.VITE_PATH_BASE),
   routes,
   scrollBehavior() {
     return { top: 0, behavior: 'smooth' }

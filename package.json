@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --mode dev",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview",
+    "dev": "vite",
     "lint": "eslint . --fix",
-    "deploy": "gh-pages -d dist"
+    "build": "rm -rf dist && eslint . --fix && vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "deploy": "cd dist && cp index.html 404.html && cd .. && gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

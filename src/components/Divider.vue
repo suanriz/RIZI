@@ -16,7 +16,7 @@ const prop = defineProps({
   max-width: 960px
   width: 100%
   min-height: 40px
-  background-image: url(/img/divider.jpg)
+  background-image: url(/img/divider.webp)
   background-position: center
   background-repeat: no-repeat
   background-size: cover

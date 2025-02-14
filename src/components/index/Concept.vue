@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
+</script>
+
 <template>
   <section>
     <Divider title="品牌精神" />
@@ -9,8 +13,8 @@
         data-aos-easing="ease-in-sine"
       >
         <img
-          v-lazy="'/img/brand/index.gif'"
-          alt="環境氛圍"
+          v-lazy="VITE_DOMAIN + 'img/brand/index.webp'"
+          alt=" 環境氛圍"
         >
       </div>
       <div

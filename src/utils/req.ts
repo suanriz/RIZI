@@ -8,9 +8,7 @@ const request: AxiosInstance = axios.create({
 request.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     if (config.url === '/goods') {
-      config.baseURL = import.meta.env.MODE === 'dev'
-        ? 'http://localhost:5173/db.json'
-        : 'https://suanriz.github.io/rizi/db.json'
+      config.baseURL = import.meta.env.VITE_API_GOODS_BASE_URL
       config.url = ''
     }
     return config

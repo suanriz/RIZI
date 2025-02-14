@@ -3,6 +3,7 @@ import { computed, onMounted } from 'vue'
 import { useIndexStore } from '@/stores/indexStore'
 
 const indexStore = useIndexStore()
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 const menuData = computed(() => indexStore.menuList.filter(x => x.indexImg).slice(0, 7))
 
 onMounted(() => indexStore.handleGetMenu())
@@ -27,7 +28,7 @@ onMounted(() => indexStore.handleGetMenu())
           </div>
           <div class="itemImgWrap">
             <img
-              v-lazy="item.indexImg"
+              v-lazy="VITE_DOMAIN + item.indexImg"
               :alt="item.name"
             >
           </div>

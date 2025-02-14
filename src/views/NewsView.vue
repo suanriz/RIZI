@@ -4,6 +4,7 @@ import { useIndexStore } from '@/stores/indexStore'
 import { computed, onMounted, ref } from 'vue'
 import { NEWS_TYPE } from '@/utils/site'
 
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 const indexStore = useIndexStore()
 const storeData = computed(() => indexStore.news)
 const pageConfig = ref({
@@ -76,7 +77,7 @@ onMounted(() => {
       >
         <div class="newsImgWrap">
           <img
-            v-lazy="news.img"
+            v-lazy="VITE_DOMAIN + news.img"
             :alt="news.title"
             @load="indexStore.loading = false"
           >

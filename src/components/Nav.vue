@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
         <h1>
           <router-link to="/">
             <img
-              src="/img/logo.jpg"
+              src="/img/logo.webp"
               alt="RIZI COFF HOUSE"
             >
           </router-link>
@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
               :count="quickcartData.length"
             >
               <img
-                src="/img/icon/quickcart.jpg"
+                src="/img/icon/quickcart.webp"
                 alt="購物車"
               >
             </a-badge>

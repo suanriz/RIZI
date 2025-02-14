@@ -3,6 +3,7 @@ const props = defineProps({
   link: { type: String, required: true },
   noGoodLink: { type: Boolean, required: false },
 })
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 </script>
 
 <template>
@@ -15,7 +16,7 @@ const props = defineProps({
         <slot>View More</slot>
       </router-link>
       <img
-        v-lazy="'/img/icon/more.svg'"
+        v-lazy="VITE_DOMAIN + 'img/icon/more.svg'"
         alt="看更多"
       >
     </div>

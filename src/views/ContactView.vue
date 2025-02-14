@@ -106,7 +106,7 @@ const handleSendEmail = () => {
     </div>
     <p class="info">
       <img
-        src="/img/icon/mail.png"
+        src="/img/icon/mail.webp"
         alt="信箱"
       >真的會收到信件哦！
     </p>

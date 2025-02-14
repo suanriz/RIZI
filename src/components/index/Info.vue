@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { SHOP_INFO } from '@/utils/site'
+
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 </script>
 
 <template>
@@ -16,7 +18,7 @@ import { SHOP_INFO } from '@/utils/site'
       >
         <div class="itemImgWrap">
           <a-image
-            :src="item.img"
+            :src="VITE_DOMAIN + item.img"
             :alt="item.name"
           />
         </div>
@@ -27,8 +29,8 @@ import { SHOP_INFO } from '@/utils/site'
           <div class="item">
             <div>
               <img
-                v-lazy="'/img/icon/tel.png'"
-                alt="電話"
+                v-lazy="VITE_DOMAIN + 'img/icon/tel.webp'"
+                alt=" 電話"
               >
             </div>
             <div>
@@ -38,8 +40,8 @@ import { SHOP_INFO } from '@/utils/site'
           <div class="item">
             <div>
               <img
-                v-lazy="'/img/icon/opening.jpg'"
-                alt="營業時間"
+                v-lazy="VITE_DOMAIN + 'img/icon/opening.webp'"
+                alt=" 營業時間"
               >
             </div>
             <div>
@@ -49,8 +51,8 @@ import { SHOP_INFO } from '@/utils/site'
           <div class="item">
             <div>
               <img
-                v-lazy="'/img/icon/address.png'"
-                alt="地址"
+                v-lazy="VITE_DOMAIN + 'img/icon/address.webp'"
+                alt=" 地址"
               >
             </div>
             <div>
@@ -88,6 +90,8 @@ section
       display: flex
     +oneCol
       flex-direction: column
+      + .itemWrap
+        margin-top: 20px
     .itemImgWrap
       +phone()
         width: 55%
@@ -130,7 +134,7 @@ section
           width: 200px
           height: 100px
           color: var(--mainWhite)
-          z-index: 100
+          z-index: 1
           -webkit-text-stroke: 0
       .item
         margin-top:20px
@@ -140,7 +144,7 @@ section
             vertical-align: middle
             aspect-ratio: 1 / 1
           > span
-            font-size: 18px
+            font-size: 16px
             letter-spacing: 0.04em
             line-height: 24px
             font-weight: 100

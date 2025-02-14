@@ -6,6 +6,7 @@ import { QUICKCART_TYPE } from '@/utils/site'
 import { sendEmail } from '@/utils/lib'
 
 const activeTab = ref(1)
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 const isCheckoutModalShow = ref(false)
 const formRef = ref<HTMLFormElement | null>(null)
 const formData: UnwrapRef<GoodsListMailType> = reactive({
@@ -140,7 +141,7 @@ onMounted(() => {
             class="checkBoxWrap"
           />
           <div class="imgWrap">
-            <img v-lazy="good.img">
+            <img v-lazy="VITE_DOMAIN + good.img">
           </div>
           <div class="flexCenter nameWrap">
             <span>{{ good.name }}</span>

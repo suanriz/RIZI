@@ -4,6 +4,7 @@ import { useIndexStore } from '@/stores/indexStore'
 import { computed } from 'vue'
 
 const props = defineProps<{ data: GoodType<CakeDetailType | CoffeeDetailType> }>()
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 const { name, link, img, price, onSale, tag } = props.data
 const indexStore = useIndexStore()
 const isCoffee = computed(() => !Object.prototype.hasOwnProperty.call(props.data, 'indexImg'))
@@ -17,7 +18,7 @@ const isCoffee = computed(() => !Object.prototype.hasOwnProperty.call(props.data
         :class="{ new: tag?.includes(1) }"
       >
         <img
-          v-lazy="img"
+          v-lazy="VITE_DOMAIN + img"
           alt="name"
         >
       </div>

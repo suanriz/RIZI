@@ -1,13 +1,17 @@
+<script lang="ts" setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+</script>
+
 <template>
   <a-result
     status="warning"
     title="此頁面不存在"
   >
     <template #extra>
-      <button>
-        <router-link to="/">
-          回首頁
-        </router-link>
+      <button @click="router.push('/')">
+        回首頁
       </button>
     </template>
   </a-result>

@@ -5,8 +5,9 @@ import { useIndexStore } from '@/stores/indexStore'
 
 const indexStore = useIndexStore()
 const banners = computed(() => indexStore.banners)
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 
-const handleOpenNewTab = (link: string) => window.open(link, '_blank')
+const handleOpenNewTab = (link: string) => window.open(VITE_DOMAIN + link, '_blank')
 
 onMounted(() => {
   indexStore.handleGetBanner()
@@ -27,7 +28,7 @@ onMounted(() => {
       >
         <img
           class="bannerImg"
-          :src="item.img"
+          :src="VITE_DOMAIN + item.img"
           :alt="item.alt"
           @load="indexStore.loading = false"
         >

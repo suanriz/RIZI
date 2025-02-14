@@ -5,6 +5,7 @@ import { computed } from 'vue'
 const props = defineModel<NewsModelType>({
   required: true
 })
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 const listIdMap = computed(() => props.value.list.map(x => x.id))
 const pageId = computed(() => props.value.data.id)
 const noPrev = computed(() => listIdMap.value[0] === pageId.value)
@@ -27,7 +28,7 @@ const handleChangeNews = (type: 'next' | 'prev') => {
     @cancel="closeModal"
   >
     <img
-      v-lazy="props.data.img"
+      v-lazy="VITE_DOMAIN + props.data.img"
       class="modalImg"
       :alt="props.data.title"
     >

@@ -17,7 +17,7 @@ const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 const app = createApp(App)
 
-AOS.init()
+AOS.init({ once: true })
 
 app.use(vueLazyLoad, {})
   .use(pinia)

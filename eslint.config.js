@@ -10,6 +10,13 @@ export default [
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
+    ignores: [
+      'src/types/*', 
+      'node_modules/',
+      'dist/'
+    ],
+  },
+  {
     plugins: { import: pluginImport },
     files: ['**/*.{js,mjs,cjs,ts,vue}'],
     languageOptions: {
@@ -20,7 +27,6 @@ export default [
         ecmaVersion: 'latest'
       }
     },
-    ignores: ['src/types/*'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '_' }],

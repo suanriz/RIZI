@@ -3,6 +3,7 @@ import { STEP_INFO } from '@/utils/site'
 import { useIndexStore } from '@/stores/indexStore'
 
 const indexStore = useIndexStore()
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 </script>
 
 <template>
@@ -11,7 +12,7 @@ const indexStore = useIndexStore()
       <Divider title="品牌精神" />
     </div>
     <img
-      src="/img/brand/view.jpg"
+      src="/img/brand/view.webp"
       alt="品牌專業"
       @load="indexStore.loading = false"
     >
@@ -41,7 +42,7 @@ const indexStore = useIndexStore()
             </h3>
             <span class="sub">{{ step.sub }}</span>
             <span class="number">{{ index + 1 }}</span>
-            <img v-lazy="step.img">
+            <img v-lazy="VITE_DOMAIN + step.img">
           </div>
           <div class="stepImgTxtWrap">
             <p>{{ step.introduction }}</p>

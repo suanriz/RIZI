@@ -4,6 +4,7 @@ import { useIndexStore } from '@/stores/indexStore'
 import { onMounted } from 'vue'
 
 const indexStore = useIndexStore()
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 
 onMounted(() => {
   indexStore.loading = false
@@ -22,7 +23,7 @@ onMounted(() => {
       data-aos-easing="ease-in-sine"
     >
       <div class="imgWrap">
-        <img :src="item.img">
+        <img :src="VITE_DOMAIN + item.img">
       </div>
       <div class="itemName">
         <h3>{{ item.name }}</h3>

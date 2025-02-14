@@ -7,6 +7,7 @@ const props = defineProps<{
   data: GoodType<CakeDetailType | CoffeeDetailType>
 }>()
 const indexStore = useIndexStore()
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 const largePicSrc = ref<string | undefined>(props.data.detail.imgs[0])
 const currentIndex = ref(0)
 const isAlbumOpen = ref(false)
@@ -41,7 +42,7 @@ onMounted(() => {
       <img
         v-for="( img, index) in props.data.detail.imgs"
         :key="img + props.data.id"
-        :src="img"
+        :src="VITE_DOMAIN + img"
         @click="updateLargePicSrc(img, index)"
       >
     </div>
@@ -53,7 +54,7 @@ onMounted(() => {
     >
       <a-image
         :key="`${largePicSrc}${data.id}`"
-        :src="largePicSrc"
+        :src="VITE_DOMAIN + largePicSrc"
         :preview="{ visible: isAlbumOpen }"
         @click="isAlbumOpen = true"
       />
@@ -65,7 +66,7 @@ onMounted(() => {
           <a-image
             v-for="img in props.data.detail.imgs"
             :key="img + props.data.id"
-            :src="img"
+            :src="VITE_DOMAIN + img"
           />
         </a-image-preview-group>
       </div>

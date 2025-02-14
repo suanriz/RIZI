@@ -3,6 +3,7 @@ import type { InfoDataType } from '@/utils/type'
 import { SHOP_INFO, CONTACT_INFO } from '@/utils/site'
 
 const headOffice = SHOP_INFO.find(x => x.id === 1) as InfoDataType
+const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
 </script>
 
 <template>
@@ -11,8 +12,8 @@ const headOffice = SHOP_INFO.find(x => x.id === 1) as InfoDataType
       <div class="topWrap">
         <div class="logoWrap">
           <img
-            v-lazy="'/img/logoFooter.png'"
-            alt="logo"
+            v-lazy="VITE_DOMAIN + 'img/logoFooter.webp'"
+            alt=" logo"
           >
         </div>
         <div class="contactWrap">
@@ -21,22 +22,22 @@ const headOffice = SHOP_INFO.find(x => x.id === 1) as InfoDataType
               <p>創始店鋪</p>
               <div>
                 <img
-                  v-lazy="'/img/icon/address.png'"
-                  alt="地址"
+                  v-lazy="VITE_DOMAIN + 'img/icon/address.webp'"
+                  alt=" 地址"
                 >
                 <span>{{ headOffice.address }}</span>
               </div>
               <div>
                 <img
-                  v-lazy="'/img/icon/tel.png'"
-                  alt="電話"
+                  v-lazy="VITE_DOMAIN + 'img/icon/tel.webp'"
+                  alt=" 電話"
                 >
                 <span>{{ headOffice.tel }}</span>
               </div>
               <div>
                 <img
-                  v-lazy="'/img/icon/mail.png'"
-                  alt="信箱"
+                  v-lazy="VITE_DOMAIN + 'img/icon/mail.webp'"
+                  alt=" 信箱"
                 >
                 <span>RIZI@gmail.com</span>
               </div>
@@ -64,20 +65,20 @@ const headOffice = SHOP_INFO.find(x => x.id === 1) as InfoDataType
         <div class="snsWrap">
           <router-link to="/contact">
             <img
-              v-lazy="'/img/icon/facebook.png'"
-              alt="facebook"
+              v-lazy="VITE_DOMAIN + 'img/icon/facebook.webp'"
+              alt=" facebook"
             >
           </router-link>
           <router-link to="/contact">
             <img
-              v-lazy="'/img/icon/instagram.png'"
-              alt="instagram"
+              v-lazy="VITE_DOMAIN + 'img/icon/instagram.webp'"
+              alt=" instagram"
             >
           </router-link>
           <router-link to="/contact">
             <img
-              v-lazy="'/img/icon/line.png'"
-              alt="line"
+              v-lazy="VITE_DOMAIN + 'img/icon/line.webp'"
+              alt=" line"
             >
           </router-link>
         </div>

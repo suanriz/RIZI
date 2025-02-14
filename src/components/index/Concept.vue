@@ -13,7 +13,7 @@ const VITE_DOMAIN = import.meta.env.VITE_DOMAIN
         data-aos-easing="ease-in-sine"
       >
         <img
-          v-lazy="VITE_DOMAIN + 'img/brand/index.webp'"
+          v-lazy="VITE_DOMAIN + 'img/brand/index.gif'"
           alt=" 環境氛圍"
         >
       </div>
